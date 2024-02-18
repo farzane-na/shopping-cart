@@ -1,0 +1,199 @@
+:root{
+    --blue:#8CB9BD;
+    --white:#FEFBF6;
+    --orange:#ECB159;
+    --brown:#B67352;
+}
+@font-face {
+    font-family: "Archivo-Medium";
+    src: url("./Archivo/Archivo-Medium.ttf") format("TrueType");
+}
+@font-face {
+    font-family: "Archivo-Bold";
+    src: url("./Archivo/Archivo-Bold.ttf") format("TrueType");
+}
+@font-face {
+    font-family: "Archivo-Regular";
+    src: url("./Archivo/Archivo-Regular.ttf") format("TrueType");
+}
+@font-face {
+    font-family: "Archivo-Light";
+    src: url("./Archivo/Archivo-Light.ttf") format("TrueType");
+}
+@font-face {
+    font-family: "Archivo-Thin";
+    src: url("./Archivo/Archivo-Thin.ttf") format("TrueType");
+}
+@font-face {
+    font-family: "Archivo-Black";
+    src: url("./Archivo/Archivo-Black.ttf") format("TrueType");
+}
+@font-face {
+    font-family: "Archivo-Italic";
+    src: url("./Archivo/Archivo-Italic.ttf") format("TrueType");
+}
+html,
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+body{
+    background-color: var(--white);
+    justify-content: center;
+    flex-direction: column;
+}
+.d-flex{
+    display: flex;
+    align-items: center;
+}
+.title{
+    width: 100%;
+    padding: 2rem;
+    font-family:"Archivo-Bold" ;
+    font-size: 3rem;
+    text-align: center;
+    background-color: var(--blue);
+}
+.container{
+    width: 50rem;
+    margin-top: 2rem;
+    flex-direction: column;
+}
+.products{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 2rem 0 5rem;
+}
+.products__item{
+    flex-direction: column;
+    width: 21rem;
+}
+.products__title{
+    text-align: center;
+    font-family: "Archivo-Bold" ;
+    font-size: 1.3rem;
+}
+.products__image{
+    width: 14rem;
+    height: 14rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+.products__image img{
+    width: 100%;
+    height: 100%;
+}
+.products__property{
+    width: 100%;
+    margin-top: 0.7rem;
+    justify-content: space-between;
+    border-top: 1px solid var(--orange);
+    padding-top: 0.5rem;
+}
+.products__price{
+    font-family: "Archivo-Black" ;
+}
+.Add-btn{
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    background-color: var(--brown);
+    color: #FEFBF6;
+    cursor: pointer;
+}
+.cart{
+    width: 100%;
+    margin-bottom: 5rem;
+}
+.carts{
+    width: 100%;
+}
+.carts__title{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: "Archivo-Bold";
+    font-size: 2rem;
+}
+.carts__basket{
+    width: 100%;
+}
+.carts_heading{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: 20px;
+}
+.carts__name-product ,
+.carts__price-product , 
+.carts__quantity-product{
+    border-bottom: 1px solid var(--orange);
+    padding-bottom: 0.5rem;
+    font-family: "Archivo-Regular";
+}
+.carts__final-basket{
+    margin-top: 1rem;
+    border-bottom: 1px solid var(--brown);
+}
+.carts__select{
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: 20px;
+    border: 1px solid var(--blue);
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.carts__select-name{
+    gap: 1rem;
+    font-family: "Archivo-Light";
+}
+.carts__select-name img{
+    width: 2rem;
+    height: 2rem;
+}
+.carts__select-quantity{
+    justify-content: center;
+    gap: 1.5rem;
+    font-family: "Archivo-Light";
+}
+.carts__select-price{
+    font-family: "Archivo-Light";
+}
+.carts__select-quantity input{
+    width: 3rem;
+    border:1px solid var(--brown);
+    padding: 0.3rem;
+}
+.carts__select-quantity button{
+    color: var(--white);
+    background-color: var(--brown);
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+}
+.total{
+    margin: 2rem 0;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+#total{
+    font-family: "Archivo-Bold";
+}
+.total-price{
+    font-family: "Archivo-Light";
+}
+.remove{
+    justify-content: center;
+}
+.remove button{
+    padding: 0.5rem 1rem;
+    color: var(--white);
+    background-color: var(--blue);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
