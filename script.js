@@ -37,7 +37,7 @@ allProducts.forEach(function(product){
     newProductAddBtn.classList.add("Add-btn");
     newProductAddBtn.innerHTML="Add To Cart";
     newProductAddBtn.addEventListener("click",()=>{
-        addProductToBasket(product);
+        addProductToBasket(product.id);
     })
 
     newProductProperty.append(newProductPrice,newProductAddBtn);
@@ -56,15 +56,15 @@ const removeAll=$.querySelector(".remove-btn");
 
 ////////////////////// Functions //////////////////////////
 
-function addProductToBasket(item){
+function addProductToBasket(productId){
     let mainProduct=allProducts.find((product)=>{
-        return product.id===item.id;
+        return product.id===productId;
     });
     let isExistProduct=userBasket.some(function(product){
-        return product.id===item.id;
+        return product.id===productId;
     });
     if(isExistProduct){
-        item.count+=1;
+        mainProduct.count+=1;
     }
     else{
         userBasket.push(mainProduct);
@@ -129,6 +129,7 @@ function removeSelectedItem(productId){
 function removeAllBasket(){
     userBasket=[];
     createBasket(userBasket);
+    clacuteTotalPriceBasket(userBasket);
 };
 
 function clacuteTotalPriceBasket(userBasketArray){
